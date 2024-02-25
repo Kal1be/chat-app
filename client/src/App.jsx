@@ -1,17 +1,16 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
-
+import {BrowserRouter,Routes,Route,Navigate} from "react-router-dom"
+import Chat from './component/chat/Chat'
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
-      <div className='text-3xl text-blue-400'>
-        kalibe  felix et je suis developpeur web
-      </div>
-    </>
+  <div className='app'>
+    <BrowserRouter>
+    <Routes>
+      <Route path='/chat' element={<Chat/>}/>
+    </Routes>
+    </BrowserRouter>
+
+  </div>
   )
 }
 
